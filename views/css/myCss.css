@@ -1,0 +1,22 @@
+.mypagination {
+  padding: 20px;
+}
+.mypagination,
+.mypagination * {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.mypagination a {
+  padding: 0 10px;
+  cursor: pointer;
+}
+.mypagination a.disabled {
+  opacity: 0.3;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+.mypagination a.current {
+  background: #f3f3f3;
+}

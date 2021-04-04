@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Files Details</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <meta name="theme-color" content="#fff" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="description" content="Page description" />
+    <!-- Twitter Card data-->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@publisher_handle" />
+    <meta name="twitter:title" content="Page Title" />
+    <meta
+      name="twitter:description"
+      content="Page description less than 200 characters"
+    />
+    <meta name="twitter:creator" content="@author_handle" />
+    <meta name="twitter:image" content="http://www.example.com/image.jpg" />
+    <!-- Open Graph data-->
+    <meta property="og:title" content="Title Here" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="http://www.example.com/" />
+    <meta property="og:image" content="http://example.com/image.jpg" />
+    <meta property="og:description" content="Description Here" />
+    <meta property="og:site_name" content="Site Name, i.e. Moz" />
+    <meta property="fb:admins" content="Facebook numeric ID" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" media="all" href="/views/css/app.css" />
+    <!-- favicon-->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/views/img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/views/img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/views/img/favicon-16x16.png"
+    />
+    <!-- <link rel="manifest" href="/views/img/site.webmanifest"> -->
+    <link
+      rel="mask-icon"
+      href="/views/img/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <meta name="msapplication-TileColor" content="#da532c" />
+  </head>
+
+  <body onload="viewDetails()">
+    <!-- page-->
+    <div class="page">
+      <!-- sidebar-->
+      <div class="sidebar js-sidebar">
+        <div class="sidebar__nav">
+          <!-- nav-->
+          <nav class="nav js-nav">
+            <a class="nav__link nav__link_head" href="/">
+              <div class="nav__preview">
+                <img class="nav__pic" src="/views/img/logo.svg" alt="Logo" />
+              </div>
+              <div class="nav__title">
+                <img
+                  class="nav__pic"
+                  src="/views/img/betaCRM.svg"
+                  alt="betaCRM"
+                />
+              </div>
+            </a>
+            <div class="nav__list">
+              <!-- mobile primary menu-->
+              <div class="nav__primary js-nav-primary">
+                <div class="nav__group">
+                  <a class="nav__link active" href="#" title="Dashboard">
+                    <div class="nav__preview">
+                      <i class="la la-tachometer-alt"></i>
+                    </div>
+                    <div class="nav__title">Dashboard</div> </a
+                  ><a class="nav__link" href="#" title="Projects">
+                    <div class="nav__preview">
+                      <i class="la la-toolbox"></i>
+                    </div>
+                    <div class="nav__title">Projects</div> </a
+                  ><a class="nav__link" href="#" title="Tasks">
+                    <div class="nav__preview">
+                      <i class="la la-clipboard-check"></i>
+                    </div>
+                    <div class="nav__title">Tasks</div> </a
+                  ><a class="nav__link" href="#" title="Kanban">
+                    <div class="nav__preview"><i class="la la-images"></i></div>
+                    <div class="nav__title">Kanban</div> </a
+                  ><a class="nav__link" href="#" title="Calendar">
+                    <div class="nav__preview">
+                      <i class="la la-calendar-week"></i>
+                    </div>
+                    <div class="nav__title">Calendar</div> </a
+                  ><a
+                    class="nav__link nav__link_menu js-nav-link-menu"
+                    href="#"
+                  >
+                    <div class="nav__preview"><i class="la la-bars"></i></div>
+                  </a>
+                </div>
+              </div>
+              <!-- mobile secondary menu-->
+              <div class="nav__secondary js-nav-secondary">
+                <div class="nav__group">
+                  <a class="nav__link" href="#" title="Contacts">
+                    <div class="nav__preview">
+                      <i class="la la-user-lock"></i>
+                    </div>
+                    <div class="nav__title">Contacts</div> </a
+                  ><a class="nav__link" href="#" title="Messages">
+                    <div class="nav__preview">
+                      <i class="la la-comments"></i>
+                      <div class="nav__online online"></div>
+                    </div>
+                    <div class="nav__title">Messages</div> </a
+                  ><a class="nav__link" href="#" title="Products">
+                    <div class="nav__preview"><i class="la la-cube"></i></div>
+                    <div class="nav__title">Products</div> </a
+                  ><a class="nav__link" href="#" title="Invoices">
+                    <div class="nav__preview">
+                      <i class="la la-calculator"></i>
+                    </div>
+                    <div class="nav__title">Invoices</div> </a
+                  ><a class="nav__link" href="#" title="File Browser">
+                    <div class="nav__preview">
+                      <i class="la la-folder-open"></i>
+                    </div>
+                    <div class="nav__title">File Browser</div> </a
+                  ><a class="nav__link" href="#" title="Notifications">
+                    <div class="nav__preview">
+                      <i class="la la-bullseye"></i>
+                      <div class="nav__online online bg-red-raw"></div>
+                    </div>
+                    <div class="nav__title">Notifications</div> </a
+                  ><a class="nav__link" href="#" title="Reports">
+                    <div class="nav__preview">
+                      <i class="la la-chart-area"></i>
+                    </div>
+                    <div class="nav__title">Reports</div> </a
+                  ><a class="nav__link" href="#" title="Help Center">
+                    <div class="nav__preview">
+                      <i class="la la-question"></i>
+                    </div>
+                    <div class="nav__title">Help Center</div> </a
+                  ><a
+                    class="nav__link nav__link_user"
+                    href="#"
+                    title="John Doe"
+                  >
+                    <div class="nav__preview">
+                      <img
+                        class="nav__pic"
+                        src="/views/img/user-1.jpg"
+                        alt="User"
+                      />
+                      <div class="nav__online online"></div>
+                    </div>
+                    <div class="nav__title">John Doe</div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div class="sidebar__container js-sidebar-container">
+          <div class="sidebar__head">
+            <div class="sidebar__preview">
+              <img
+                class="sidebar__pic"
+                src="/views/img/leaderLogo.jpg"
+                alt="WhiteUI.store"
+              />
+            </div>
+            <div class="sidebar__wrap">
+              <div class="sidebar__title"></div>
+              <div class="sidebar__text"></div>
+            </div>
+            <button
+              class="sidebar__action sidebar__action_toggle action js-sidebar-toggle"
+            >
+              <i class="la la-angle-left"></i>
+            </button>
+          </div>
+          <div class="sidebar__inner">
+            <div class="sidebar__section">
+              <!-- menu-->
+              <div class="menu js-menu">
+                <div class="menu__head js-menu-head">
+                  <div class="menu__item js-menu-item">
+                    <div class="menu__icon">
+                      <i class="la la-folder-open"></i>
+                    </div>
+                    <div class="menu__wrap">
+                      <div class="menu__title">My Files</div>
+                      <div class="menu__text">Files that your own</div>
+                    </div>
+                    <div class="menu__badge badge green">5</div>
+                  </div>
+                  <button class="menu__action action js-menu-toggle">
+                    <i class="la la-bars"></i>
+                  </button>
+                </div>
+                <div class="menu__container js-menu-container">
+                  <div class="menu__section">
+                    <a
+                      class="menu__item js-menu-item active"
+                      href="#"
+                      onclick="viewFiles()"
+                    >
+                      <div class="menu__icon">
+                        <i class="la la-folder-open"></i>
+                      </div>
+                      <div class="menu__wrap">
+                        <div class="menu__title">My Files</div>
+                        <div class="menu__text">Files that your own</div>
+                      </div>
+                      <div class="menu__badge badge"></div> </a
+                    ><a
+                      class="menu__item js-menu-item"
+                      href="#"
+                      onclick="goToSharedFiles()"
+                    >
+                      <div class="menu__icon">
+                        <i class="la la-broadcast-tower"></i>
+                      </div>
+                      <div class="menu__wrap">
+                        <div class="menu__title">Sharing</div>
+                        <div class="menu__text">
+                          Files that others share with you
+                        </div>
+                      </div>
+                      <!-- <div class="menu__badge badge"></div>
+                  </a><a class="menu__item js-menu-item" href="#">
+                    <div class="menu__icon"><i class="la la-inbox "></i></div>
+                    <div class="menu__wrap">
+                      <div class="menu__title">Archieve</div>
+                      <div class="menu__text">Files that you store in archieve</div>
+                    </div> -->
+                      <div class="menu__badge badge"></div> </a
+                    ><a
+                      class="menu__item js-menu-item"
+                      href="#"
+                      onclick="showArchiv()"
+                    >
+                      <div class="menu__icon">
+                        <i class="la la-trash-alt"></i>
+                      </div>
+                      <div class="menu__wrap">
+                        <div class="menu__title">Deleted Files</div>
+                        <div class="menu__text">
+                          Files that will be deleted soon
+                        </div>
+                      </div>
+                      <div class="menu__badge badge"></div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sidebar__section">
+              <div class="panel__foot">
+                <div class="pager">
+                  <a class="pager__arrow action action_icon_before" href="#"
+                    ><i class="la la-angle-left"></i
+                  ></a>
+                  <div class="pager__list">
+                    <a class="pager__link action active" href="#">All</a
+                    ><a class="pager__link action" href="#">example tag</a>
+                  </div>
+                  <a class="pager__arrow action action_icon_after" href="#"
+                    ><i class="la la-angle-right"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- container-->
+      <div class="container js-container">
+        <div class="container__head">
+          <button
+            class="container__action container__action_menu action js-container-toggle"
+          >
+            <i class="la la-bars"></i>
+          </button>
+          <div class="container__title title title_md">File Management</div>
+          <!-- search-->
+          <div class="container__search search js-search">
+            <button class="search__action action js-search-open">
+              <i class="la la-search"></i>
+            </button>
+            <div class="search__dropdown js-search-dropdown">
+              <div class="search__field">
+                <input
+                  class="search__input js-search-input"
+                  type="search"
+                  placeholder="Start typing…"
+                />
+                <div class="search__icon"><i class="la la-search"></i></div>
+              </div>
+              <div class="search__results js-search-results">
+                <a class="search__result" href="#">
+                  <div class="search__cell">
+                    <div class="search__preview color-red">
+                      <i class="lab la-dribbble"></i>
+                    </div>
+                  </div>
+                  <div class="search__cell">
+                    <div class="search__title">Dribble Redesign</div>
+                    <div class="search__text">Webdesign</div>
+                  </div>
+                  <div class="search__cell mobile-hide">
+                    <!-- tag-->
+                    <div class="search__tag tag gray">24 Feb 2019</div>
+                  </div> </a
+                ><a class="search__result" href="#">
+                  <div class="search__cell">
+                    <div class="search__preview color-green">
+                      <i class="lab la-evernote"></i>
+                    </div>
+                  </div>
+                  <div class="search__cell">
+                    <div class="search__title">New HTML Theme</div>
+                    <div class="search__text">Theme</div>
+                  </div>
+                  <div class="search__cell mobile-hide">
+                    <!-- tag-->
+                    <div class="search__tag tag gray">20 May 2019</div>
+                  </div> </a
+                ><a class="search__result" href="#">
+                  <div class="search__cell">
+                    <div class="search__preview">
+                      <img
+                        class="search__pic"
+                        src="/views/img/user-1.jpg"
+                        alt="User"
+                      />
+                    </div>
+                  </div>
+                  <div class="search__cell">
+                    <div class="search__title">Bradley Wilkins</div>
+                    <div class="search__text">b.wilkins@gmail.com</div>
+                  </div>
+                  <div class="search__cell mobile-hide">
+                    <!-- tag-->
+                    <div class="search__tag tag gray">Designer</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="search__backdrop backdrop js-search-backdrop"></div>
+          </div>
+          <!-- new-->
+          <div class="container__new new js-new">
+            <button class="new__action action js-new-open">
+              <i class="la la-plus-circle"></i>
+            </button>
+            <div class="new__dropdown js-new-dropdown">
+              <a class="new__item" href="#">
+                <div class="new__icon"><i class="la la-toolbox"></i></div>
+                <div class="new__title">New Project</div> </a
+              ><a class="new__item" href="#">
+                <div class="new__icon">
+                  <i class="la la-clipboard-check"></i>
+                </div>
+                <div class="new__title">New Task</div> </a
+              ><a class="new__item" href="#">
+                <div class="new__icon"><i class="la la-user-lock"></i></div>
+                <div class="new__title">New Contact</div> </a
+              ><a class="new__item" href="#">
+                <div class="new__icon"><i class="la la-calendar-week"></i></div>
+                <div class="new__title">New Event</div> </a
+              ><a class="new__item" href="#">
+                <div class="new__icon"><i class="la la-cube"></i></div>
+                <div class="new__title">New Product</div> </a
+              ><a class="new__item" href="#">
+                <div class="new__icon"><i class="la la-calculator"></i></div>
+                <div class="new__title">New Invoice</div>
+              </a>
+            </div>
+            <div class="new__backdrop backdrop js-new-backdrop"></div>
+          </div>
+        </div>
+        <div class="container__body">
+          <!-- panel-->
+          <div class="panel">
+            <div class="panel__head mobile-hide">
+              
+              <button
+                id="btnBack"
+                class="panel__back back"
+                onclick="backToViewFiles()"
+              >
+               <i class="la la-angle-left"></i>Back
+              </button>
+              <div class="panel__group">
+                <button
+                  id="btnShare"
+                  onclick="shareFile()"
+                  class="action action_stroke"
+                >
+                  <i class="la la-ellipsis-h"></i>
+                </button>
+              </div>
+            </div>
+            <div class="panel__body">
+              <!-- file-->
+              <div class="file">
+                <div class="file__container">
+                  <div class="file__preview yellow">
+                    <img id="fileIcon" class="file__pic" alt="Sketch" />
+                  </div>
+                  <div class="file__title" id="fileTitle"></div>
+                  <div class="file__text" id="fileSize"></div>
+                  <div class="members file__members">
+                    <div class="members__item">
+                      <img
+                        class="members__pic"
+                        src="/views/img/user-1.jpg"
+                        alt="User"
+                      />
+                    </div>
+                    <div class="members__item">
+                      <img
+                        class="members__pic"
+                        src="/views/img/user-2.jpg"
+                        alt="User"
+                      />
+                    </div>
+                    <div class="members__item">
+                      <img
+                        class="members__pic"
+                        src="/views/img/user-3.jpg"
+                        alt="User"
+                      />
+                    </div>
+                    <div class="members__item">
+                      <div class="members__counter">+5</div>
+                    </div>
+                  </div>
+                  <div class="file__meta meta">
+                    <i class="la la-tags"></i>Designer
+                  </div>
+                </div>
+                <div id="files">
+<img id="fileImg"/>
+<iframe id="viewer"></iframe>
+
+                </div>
+
+                <!-- chat-->
+                <div class="file__chat chat chat_file">
+                  <div class="reply chat__reply">
+                    <div class="reply__field">
+                      <br />&nbsp;&nbsp;&nbsp;&nbsp;<b>notes:</b><br />
+                      <div id="fileComments"></div>
+                    </div>
+                  </div>
+                  <!-- reply-->
+                  <div id="addNotes" class="reply chat__reply">
+                    <div class="reply__field">
+                      <textarea
+                        id="notes"
+                        class="reply__textarea"
+                        placeholder="Add your comment"
+                      ></textarea>
+                    </div>
+                    <div class="reply__actions">
+                      <button class="reply__action">
+                        <i class="la la-smile"></i></button
+                      ><button class="reply__action">
+                        <i class="la la-paperclip"></i></button
+                      ><button class="reply__btn btn" onclick="saveNote()">
+                        Save
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modals-->
+    <!-- scripts-->
+    <script src="/views/js/lib/jquery.min.js"></script>
+    <script src="/views/js/lib/datepicker.min.js"></script>
+    <script src="/views/js/lib/datepicker.en.js"></script>
+    <script src="/views/js/lib/select2.min.js"></script>
+    <script src="/views/js/lib/wNumb.min.js"></script>
+    <script src="/views/js/lib/nouislider.min.js"></script>
+    <script src="/views/js/lib/apexcharts.min.js"></script>
+    <script src="/views/js/charts.js"></script>
+    <script src="/views/js/app.js"></script>
+    <script src="/views/js/myScripts.js"></script>
+  </body>
+</html>
